@@ -113,10 +113,10 @@ function Periods({ token, onLogout }) {
       {/* Header row with clock */}
       <div className="d-flex justify-content-between align-items-center mb-3">
         <div>
-          <h2 className="glow-text">School Bell Periods</h2>
-          <small className="text-muted fs-1 text-info">
-            Live Time:{" "}
-            <strong class="fs-1 text-success">{time.toLocaleTimeString()}</strong>
+          <h2 className="glow-text">AUTOMATION COLLEGE BELL </h2>
+          <small className="text-muted "><strong class="fs-1 text-warning">
+            LIVE TIMER:</strong>{" "}
+            <strong class="fs-1 text-white">{time.toLocaleTimeString()}</strong>
           </small>
         </div>
         <button className="btn btn-outline-danger" onClick={onLogout}>
