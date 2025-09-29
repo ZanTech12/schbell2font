@@ -114,9 +114,9 @@ function Periods({ token, onLogout }) {
       <div className="d-flex justify-content-between align-items-center mb-3">
         <div>
           <h2 className="glow-text">School Bell Periods</h2>
-          <small className="text-muted">
+          <small className="text-muted fs-1 text-info">
             Live Time:{" "}
-            <strong>{time.toLocaleTimeString()}</strong>
+            <strong class="fs-1 text-success">{time.toLocaleTimeString()}</strong>
           </small>
         </div>
         <button className="btn btn-outline-danger" onClick={onLogout}>
