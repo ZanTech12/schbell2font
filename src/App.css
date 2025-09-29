@@ -1,48 +1,81 @@
-body {
+/* Body setup: full viewport + centered content */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+
+  /* Background image + gradient overlay */
   background:
     linear-gradient(rgba(30, 60, 114, 0.5), rgba(42, 82, 152, 0.5)),
+    /* semi-transparent overlay */
     url('./images/image.jpeg') no-repeat center center;
   background-size: cover;
-  background-attachment: fixed;
+  /* fit all screens */
   background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  /* stack content vertically */
+  justify-content: center;
+  /* vertical centering */
+  align-items: center;
+  /* horizontal centering */
+  text-align: center;
+
   animation: gradientMove 10s ease infinite;
 }
 
+/* Make sure all main containers fill viewport */
+.full-screen-container {
+  width: 100%;
+  min-height: 100vh;
+  /* full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-/* Glowing heading */
-.glow-heading {
-  color: #fff;
-  text-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff, 0 0 20px #00f7ff,
-    0 0 40px #00f7ff, 0 0 80px #00f7ff;
+/* Gradient animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%, center;
+  }
+
+  50% {
+    background-position: 100% 50%, center;
+  }
+
+  100% {
+    background-position: 0% 50%, center;
+  }
+}
+
+/* Frosted glass card for forms/content */
+.card-transparent {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 500px;
+  width: 90%;
+  /* responsive for mobile */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+}
+
+/* Glowing headings */
+.glow-heading,
+.glow-text {
+  font-weight: bold;
+  color: #00f7ff;
+  text-shadow: 0 0 5px #00f7ff, 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 40px #00f7ff;
   animation: glowPulse 2s infinite alternate;
-}
-
-@keyframes glowPulse {
-  from {
-    text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 30px #00f7ff;
-  }
-
-  to {
-    text-shadow: 0 0 20px #00f7ff, 0 0 40px #00f7ff, 0 0 60px #00f7ff;
-  }
-}
-
-/* Neon clock effect */
-.glow-clock {
-  font-size: 1.1rem;
-  color: #39ff14;
-  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
-  animation: clockPulse 1.5s infinite alternate;
-}
-
-@keyframes clockPulse {
-  from {
-    text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
-  }
-
-  to {
-    text-shadow: 0 0 20px #39ff14, 0 0 40px #39ff14;
-  }
 }
 
 /* Glowing buttons */
@@ -66,16 +99,14 @@ body {
   background-color: #25d366;
   color: white;
   border-radius: 50%;
-  text-align: center;
-  font-size: 35px;
-  /* icon size */
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 35px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   text-decoration: none;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 1000;
 }
 
 .whatsapp-float:hover {
@@ -83,36 +114,21 @@ body {
   background-color: #20b858;
 }
 
-/* Glowing + Animated Heading for School Bell Periods */
-.glow-text {
-  font-size: 3.5rem;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 10px;
-  text-shadow:
-    0 0 5px #00e6e6,
-    0 0 10px #00e6e6,
-    0 0 20px #00e6e6,
-    0 0 40px #00e6e6;
-  animation: glowPulse 2s infinite alternate, fadeText 3s ease-in-out infinite alternate;
-}
-
-/* ✅ this closing bracket is important */
-
+/* Glow animation */
 @keyframes glowPulse {
   from {
-    text-shadow:
-      0 0 5px #00e6e6,
-      0 0 10px #00e6e6,
-      0 0 20px #00e6e6;
+    text-shadow: 0 0 5px #00e6e6, 0 0 10px #00e6e6, 0 0 20px #00e6e6;
   }
 
   to {
-    text-shadow:
-      0 0 10px #00ffff,
-      0 0 20px #00ffff,
-      0 0 40px #00ffff,
-      0 0 80px #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 80px #00ffff;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-transparent {
+    width: 95%;
+    padding: 20px;
   }
 }

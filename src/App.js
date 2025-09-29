@@ -206,34 +206,33 @@ function Periods({ token, onLogout }) {
           </button>
         </div>
       </div>
+      <div>
+        {/* Floating WhatsApp Button */}
+        <a
+          href="https://wa.me/2348104654863"
+          className="whatsapp-float"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaWhatsapp />
+        </a>
+      </div><br />
+      <div>
+        {/* Footer with production date */}
+        <footer
+          className="footer text-center mt-5 mb-3"
+          style={{ color: "red" }}
+        >
 
-      {/* Floating WhatsApp Button */}
-      <a
-        href="https://wa.me/2348104654863"
-        className="whatsapp-float"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <FaWhatsapp />
-      </a>
-      {/* Footer with production date */}
-      <footer
-        className="footer text-center mt-5 mb-3"
-        style={{ color: "red" }}
-      >
-        <small>
-          <strong>
-            <a
-              href="https://denotech-two.vercel.app/"
-              style={{ color: "yellow", textDecoration: "none" }}
-            >
-              Deno Technology Limited (c) 2025
-            </a>
-          </strong>
-          : {new Date().toLocaleDateString()}
-        </small>
-      </footer>
+          <a
+            href="https://denotech-two.vercel.app/"
+            style={{ color: "yellow", textDecoration: "none" }}
+          >
+            Deno Technology Limited (c) 2025
+          </a>
 
+        </footer>
+      </div>
     </div>
   );
 }
