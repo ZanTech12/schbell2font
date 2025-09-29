@@ -115,7 +115,7 @@ function Periods({ token, onLogout }) {
         <div>
           <h2 className="glow-text">AUTOMATION COLLEGE BELL </h2>
           <small className="text-muted "><strong class="fs-1 text-warning">
-            LIVE TIMER:</strong>{" "}
+            LIVE-TIMER:</strong>{" "}
             <strong class="fs-1 text-white">{time.toLocaleTimeString()}</strong>
           </small>
         </div>

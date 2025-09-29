@@ -1,49 +1,13 @@
 body {
-  margin: 0;
-  height: 100%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
-
-  /* Combine image and transparent gradient */
   background:
     linear-gradient(rgba(30, 60, 114, 0.5), rgba(42, 82, 152, 0.5)),
-    /* semi-transparent gradient on top */
-    url('./images/image.jpeg') no-repeat center center / cover;
-  /* bottom image */
-
-  /* Optional gradient animation (for background-position) */
-  background-size: 400% 400%, cover;
+    url('./images/image.jpeg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   animation: gradientMove 10s ease infinite;
 }
 
-/* Gradient animation (affects gradient layer) */
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%, center;
-  }
-
-  50% {
-    background-position: 100% 50%, center;
-  }
-
-  100% {
-    background-position: 0% 50%, center;
-  }
-}
-
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 /* Glowing heading */
 .glow-heading {
