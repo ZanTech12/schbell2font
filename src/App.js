@@ -58,7 +58,7 @@ function Periods({ token, onLogout }) {
   const [form, setForm] = useState({
     name: "",
     startTime: "08:00",
-    durationSec: 300,
+    durationSec: 10,
     position: 1,
   });
   const [time, setTime] = useState(new Date());
