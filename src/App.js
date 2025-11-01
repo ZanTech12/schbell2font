@@ -3,7 +3,7 @@ import axios from "axios";
 import "./App.css"; // for styling
 import { FaWhatsapp } from "react-icons/fa";
 
-const API = "http://72.61.160.196:4000"; // backend server URL
+const API = "https://schbell2-1.onrender.com"; // backend server URL
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState("");
